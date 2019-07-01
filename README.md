@@ -2,6 +2,6 @@
 
 Run with:
 
-´´´bash
+```bash
 docker run --device /dev/gpiomem -p 5000:5000 tillepille/rpi-garage
-´´´
+```
