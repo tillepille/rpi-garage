@@ -26,10 +26,7 @@ def up():
   global currentPosition
   if currentPosition == 1:
     click()
-    currentPosition = 0
-  else:
-    currentPosition = 0
-
+  currentPosition = 0
   return jsonify(position=currentPosition)
 
 @app.route('/down')
@@ -37,9 +34,11 @@ def down():
   global currentPosition
   if currentPosition == 0:
     click()
-    currentPosition = 1
-  else:
-    currentPosition = 1
+  currentPosition = 1
+  return jsonify(position=currentPosition)
+
+@app.route('/status')
+def status():    
   return jsonify(position=currentPosition)
 
 if __name__ == '__main__':
